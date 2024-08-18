@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles (Dark Mode) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #110703;
+    color: #dc602e;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.light-mode .accordion_item {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+body.light-mode .accordion_title.active {
+    border-bottom: 2px solid #333;
+}
+
+body.light-mode .theme-toggle {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.theme-toggle {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #dc602e;
+    color: #110703;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.section {
+    min-height: 100vh;
+    padding-top: 3rem;
+}
+
+.container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.accordion {
+    max-width: 700px;
+}
+
+.accordion_item {
+    background-color: #dc602e;
+    color: #110703;
+    padding: 5px;
+    border-radius: 15px;
+    margin-bottom: 10px; /* Add some space between items */
+}
+
+.accordion_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 30px;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.accordion_title h3 {
+    flex: 1;
+    font-size: 1.5rem;
+}
+
+.accordion_title i {
+    font-size: 2rem;
+    transition: transform 0.3s; /* Smooth icon rotation */
+}
+
+.accordion_title.active + .accordion_content {
+    display: block;
+    padding-top: 20px;
+}
+
+.accordion_content {
+    display: none; /* Hide content by default */
+}
+
+.accordion_content p {
+    font-size: 1.5rem;
+}
+
+.accordion_title.active i {
+    transform: rotate(180deg);
+}
+
+.accordion_title.active {
+    border-bottom: 2px dashed #110703;
+}
