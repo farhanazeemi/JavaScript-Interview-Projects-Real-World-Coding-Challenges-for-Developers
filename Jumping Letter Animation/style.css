@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.container {
+    cursor: pointer;
+}
+
+span {
+    color: bisque;
+    font-size: 6rem;
+    font-weight: 900;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+span:active {
+    animation: jump 0.6s ease-in-out;
+}
+
+@keyframes jump {
+    0% {
+        transform: scale(1) translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    30% {
+        transform: scale(1.2) translateY(-50px) rotate(20deg);
+        opacity: 0.8;
+    }
+    60% {
+        transform: scale(2.5) translateY(-150px) rotate(180deg);
+        opacity: 0.6;
+    }
+    80% {
+        transform: scale(2.2) translateY(-120px) rotate(360deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1) translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
